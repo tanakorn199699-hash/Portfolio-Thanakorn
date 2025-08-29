@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js library for 3D background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        /* Custom styles เเละ 3D background c*/
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- 3D background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-sm shadow-md rounded-b-xl mb-8 md:mb-12">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
+            <a href="#hero"
+                class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors duration-300">
+                ธนกร นาโควงค์
+            </a>
+            <div class="space-x-4 md:space-x-8">
+                <a href="#about" class="text-lg text-gray-300 hover:text-white transition-colors duration-300">
+                    เกี่ยวกับฉัน
+                </a>
+                <a href="#projects" class="text-lg text-gray-300 hover:text-white transition-colors duration-300">
+                    โปรเจกต์
+                </a>
+                <a href="#contact" class="text-lg text-gray-300 hover:text-white transition-colors duration-300">
+                    ติดต่อ
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- เนื้อหา -->
+    <main class="container mx-auto px-6 md:px-12">
+
+        <!-- ส่วนบน -->
+        <section id="hero"
+            class="py-24 md:py-32 flex flex-col items-center justify-center text-center min-h-[calc(100vh-100px)]">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight">
+                สวัสดีครับ <span class="text-indigo-400">ผม ธนกร นาโควงค์</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
+                ผมเป็นนักศึกษาที่มีความสนใจเกี่ยวกับการเขียนโค้ดเเละสื่อดิจิทัลออนไลน์ต่างๆ
+            </p>
+            <a href="#projects"
+                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105">
+                ดูโปรเจกต์ของผม
+            </a>
+        </section>
+
+        <!-- ประวัติส่วน -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    ประวัติส่วนตัวเกี่ยวกับฉัน
+                </h2>
+                <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
+                    สวัสดีครับ ผมคือ ธนกร นาโควงค์ ผมมีความสนใจในด้านการเล่นเกมส์เเละการปั้นโมเดล 3D เเละ เเละการทำ อนิเมชั่น
+                    เเละฝึกฝนตัวเองในด้านที่ผมสนใจใฝ่รู้
+                </p>
+                <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+                    ผมมีความเชี่ยวชาญใน Basic Software HTML JavaScript เบื้องต้น
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-16 md:py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                โปรเจกต์ของผม
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="./ประกวดพาน.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">ประกวดทำพาน</h3>
+                        <p class="text-gray-400 text-base md:text-lg mb-4">
+                        ข้อมูลเพิ่มเติม    ประการกวดทำพานได้อันดับที่1
+                        </p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div
+                    class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="./พิธีไหว้ครู.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">รับทุน</h3>
+                        <p class="text-gray-400 text-base md:text-lg mb-4">
+                        ข้อมูลเพิ่มเติม    รับทุนประพฤติตัวดี
+                        </p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div
+                    class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="./อบร่มที่วิลัย.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">อบร่มศึกษา</h3>
+                        <p class="text-gray-400 text-base md:text-lg mb-4">
+                        ข้อมูลเพิ่มเติม    ได้รับการอบร่มศึกษาเพิ่มเติมความรู้ด้าน it เพิ่มเติม
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ติดต่อ -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    ติดต่อได้ที่
+                </h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    094-756-1683 / tanakorn199699@gmail.com
+                </p>
+                <div class="flex justify-center space-x-6">
+                </div>
+            </div>
+        </section>
+    </main>
+    </script>
+</body>
+
+</html>
